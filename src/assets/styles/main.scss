@@ -1,3 +1,6 @@
+@import 'vars-mixins.scss';
+
+
 body {
   background-color: #fff;
   font-family: AtlasGrotesk-editor-rtl, AtlasGrotesk-editor, -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Oxygen, Ubuntu, Cantarell, “Open Sans”, “Helvetica Neue”, sans-serif;
@@ -5,7 +8,127 @@ body {
   line-height: 26px;
   color: #1b2733;
   font-variant-ligatures: no-common-ligatures;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
   letter-spacing: 3px;
+}
+
+
+
+// ALL CLASSES USED MULTIPLE TIMES
+.flex {
+  @include flex-box();
+  @include justify-content();
+}
+
+.border {
+  border: 1px solid #d0d0d3 !important;
+}
+
+.no-padding {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+#react-app-root {
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: $light;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: $regular;
+}
+
+.box-padding {
+  padding: 15px;
+}
+
+
+.contain {
+  .intro-container {
+
+    .intro {
+      padding: 15px;
+      
+
+      h1 {
+        font-size: 30px;
+        font-weight: $light;
+      }
+
+      .myspaceImg {
+        height: 25px;
+      }
+
+      .img-container {
+        position: relative;
+        overflow: hidden;
+
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+        }
+
+      }
+    }
+  }
+.network-container {
+  .network {
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+.contact-container {
+  margin-top: 15px;
+
+  .contact {
+    .icon {
+      margin-right: 10px;
+    }
+  }
+}
+}
+
+// Media Queries 
+
+@media(max-width: $sm-break) {
+  .contain {
+    .intro-container {
+  
+      .intro {
+        text-align: center;
+
+       .intro-online {
+          margin-top: 10px;
+       }
+      }
+    }
+
+    .network-container {
+      .network {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+@media(max-width: $md-break) {
+  .contain {
+    .intro-container {
+  
+    }
+
+    .network-container {
+      .network {
+        margin-top: 15px;
+      }
+    }
+  }
 }
