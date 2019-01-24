@@ -5,7 +5,7 @@ import { faEnvelope, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   return (
-    <div className="border contact box-padding">
+    <div className="border contact box-padding margin-top-15">
       <div className="row">
         <div className="col-xs-3 col-sm-6 col-md-6">
           <h2><FontAwesomeIcon icon={faGithub} className="icon" />Github</h2>

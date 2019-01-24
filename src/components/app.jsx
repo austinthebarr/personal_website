@@ -3,6 +3,7 @@ import Intro from './intro.jsx';
 import ExtendedNetwork from './extendedNetwork.jsx';
 import Contact from './contact.jsx';
 import Blurbs from './blurbs.jsx';
+import MissionStatement from './mission.jsx';
 class App extends React.Component {
 
   constructor(props) {
@@ -10,25 +11,19 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="contain">
+      <div className="contain no-padding col-sm-12 col-md-12 col-lg-12 row">
 
-        <div className="no-padding row">
-          <div className="col-sm-12 col-md-6 col-lg-6 intro-container">
-            <Intro />
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 network-container">
-            <ExtendedNetwork />
-          </div>
+        <div className="col-sm-12 col-md-6 col-lg-6 intro-container">
+          <Intro />
+          <Contact />
         </div>
 
-        <div className="no-padding row">
-          <div className="col-sm-12 col-md-6 col-lg-6 contact-container">
-            <Contact />
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 contact-container">
-            <Blurbs />
-          </div>
+        <div className="col-sm-12 col-md-6 col-lg-6 network-container ">
+          <ExtendedNetwork />
+          <MissionStatement />
+          <Blurbs />
         </div>
+      
       </div>
     );
 

@@ -48,13 +48,17 @@ h2 {
   padding: 15px;
 }
 
+.margin-top-15 {
+  margin-top: 15px;
+}
+
 
 .contain {
   .intro-container {
 
     .intro {
       padding: 15px;
-      
+
 
       h1 {
         font-size: 30px;
@@ -78,22 +82,26 @@ h2 {
       }
     }
   }
-.network-container {
-  .network {
-    padding: 15px;
-    text-align: center;
-  }
-}
 
-.contact-container {
-  margin-top: 15px;
+  .network-container {
+    .network {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .mission {}
+
+    .blurb {}
+  }
+
+
 
   .contact {
     .icon {
       margin-right: 10px;
     }
+
   }
-}
 }
 
 // Media Queries 
@@ -101,13 +109,13 @@ h2 {
 @media(max-width: $sm-break) {
   .contain {
     .intro-container {
-  
+
       .intro {
         text-align: center;
 
-       .intro-online {
+        .intro-online {
           margin-top: 10px;
-       }
+        }
       }
     }
 
@@ -122,7 +130,7 @@ h2 {
 @media(max-width: $md-break) {
   .contain {
     .intro-container {
-  
+      
     }
 
     .network-container {
